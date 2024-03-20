@@ -254,8 +254,8 @@ def generate_response_with_llm_for_multiple_namespaces(index, user_input, namesp
     ユーザーメッセージのメッセージに従い、Instagramのフィード台本を生成してください。
     ----------
     # 情報一覧
-    【ユーザーのメッセージ】{user_input}
-    【表紙タイトルDB】 {results_ns3}
+    ユーザーのメッセージ{user_input}
+    表紙タイトルDB {results_ns3}
     ----------
     # 依頼
     ①次の形式とルール1を厳守し、ユーザーのメッセージに従って適切なタイトルを5個出力してください。
@@ -268,7 +268,7 @@ def generate_response_with_llm_for_multiple_namespaces(index, user_input, namesp
     文字数：フックとベースを合計した文字数＋文字
     使用したキーワード例：
 
-    ##ルール
+    ##ルール1
     - 表紙タイトルDBを参照し、適切なキーワード例を必ず1個以上含めてください
     - 表紙タイトルDBに入っていないキーワード例は絶対に含めないでください
     - キーワード例はアレンジせずそのまま使用してください
