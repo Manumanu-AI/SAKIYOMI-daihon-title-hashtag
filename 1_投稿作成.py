@@ -19,7 +19,7 @@ with tab1:
     col1, col2 = st.columns(2)
 
     with col1:
-        user_input = st.text_area("生成指示 : 作りたいプロットのイメージを入力", value="""以下の内容で台本を書いてください。\nテーマ：\n\nターゲット：\n\nその他の指示：""", height=300)
+        user_input = st.text_area("生成指示 : 作りたいプロットのイメージを入力", height=300)
         url = st.text_input("参考URL")
         submit_button = st.button('送信')
 
@@ -57,7 +57,7 @@ with tab1:
                 st.session_state['response_text'] = "エラー: プロットを生成できませんでした。"
 
         # セッション状態からresponse_textを取得、存在しない場合はデフォルトのメッセージを表示
-        displayed_value = st.session_state.get('response_text', "生成結果 : プロットが表示されます")
+        displayed_value = st.session_state.get('response_text', "生成結果 ")
         st.text_area("生成結果", value=displayed_value, height=400)
   
 
